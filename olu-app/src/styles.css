@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*************  BASE STYLES  ****************/
+*{ box-sizing: border-box; }
+body { font-family: 'Open Sans', 'sans serif'; font-size: 14px; line-height: 1.4; color: #2f383d; margin: 0; }
+/********************************************/
