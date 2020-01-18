@@ -3,4 +3,29 @@
 /*************  BASE STYLES  ****************/
 *{ box-sizing: border-box; }
 body { font-family: 'Open Sans', 'sans serif'; font-size: 14px; line-height: 1.4; color: #2f383d; margin: 0; }
+a { color: #ff9900; text-decoration: none;}
+ul { padding: 0; margin: 0; list-style: none; }
+nav { padding: 10px 0; }
+h1, h2, h3, h4, h5, h6 { margin: 0; }
 /********************************************/
+
+/****************  HEADER  *****************/
+.brand {
+    height: 90px;
+    width: 100px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*************  HERO SECTION  ***************/
+.hero {
+    background-image: url('../src/assets/images/olu-hero.png');
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    
+}
