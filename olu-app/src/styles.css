@@ -9,23 +9,17 @@ nav { padding: 10px 0; }
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 /********************************************/
 
-/****************  HEADER  *****************/
-.brand {
-    height: 90px;
-    width: 100px;
+/*************  CSS VARIABLE  ***************/
+:root {
+    --primary: #06618e;
+    --danger: #ff9900;
+    --dark: #a0a0a0;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+
+/*BRANDING*/
 .logo {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/*************  HERO SECTION  ***************/
-.hero {
-    background-image: url('../src/assets/images/olu-hero.png');
-    height: 400px;
-    background-size: cover;
-    background-position: center center;
-    
+    width: 70px;
 }
