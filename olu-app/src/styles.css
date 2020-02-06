@@ -20,6 +20,106 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 
 /*BRANDING*/
-.logo {
-    width: 70px;
+#logo {
+    width: 30px;
+}
+
+
+
+/*********MAIN CONTAINER************/
+.myGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+    'about about'
+    'mission vision'
+    ;
+}
+
+.about {
+    grid-area: about;
+    grid-column: 1/3;
+}
+
+.mission {
+    grid-area: mission;
+    grid-column: 1/2;
+}
+
+.vision {
+    grid-area: vision;
+    grid-column: 2/3;
+}
+
+@media (max-width: 576px) {
+    .myGrid {
+        grid-template-areas: 
+        'about'
+        'mission'
+        'vision'
+        ;
+    }
+
+    .about {
+        grid-column: 1/3;
+    }
+
+    .mission {
+        grid-column: 1/3;
+
+    }
+
+    .vision {
+        grid-column: 1/3;
+    }
+}
+
+/**********FOOTER**************/
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 20px;
+    grid-template-areas: 
+    'support info social-media'
+    'support info social-media'
+    'support info social-media'
+    ;
+}
+
+.support {
+    grid-area: support;
+    grid-column: 1/2;
+}
+
+.info {
+    grid-area: info;
+    grid-column: 2/3;
+}
+
+.social-media {
+    grid-area: social-media;
+    grid-column: 3/4;
+}
+
+@media (max-width: 576px) {
+    .footer {
+        grid-area: 
+        'support'
+        'info'
+        'social-media';
+    }
+    .support{
+        grid-column: 1/4;
+    }
+
+    .info {
+        grid-column: 1/4;
+    }
+
+    .social-media {
+        grid-column: 1/4;
+    }
 }
