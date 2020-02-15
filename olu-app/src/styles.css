@@ -2,8 +2,12 @@
 
 /*************  BASE STYLES  ****************/
 *{ box-sizing: border-box; }
-body { font-family: 'Open Sans', 'sans serif'; font-size: 14px; line-height: 1.4; color: #2f383d; margin: 0; }
-a { color: #06618e; text-decoration: none;}
+body { font-family: 'Open Sans', 'sans serif'; font-size: 16px; line-height: 1.4; color: #2f383d; margin: 0; }
+a { color: #fff; text-decoration: none;}
+
+a :hover {
+    color: var(--primary);
+}
 ul { padding: 0; margin: 0; list-style: none; }
 nav { padding: 10px 0; }
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -12,7 +16,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 /*************  CSS VARIABLE  ***************/
 :root {
     --primary: #06618e;
-    --danger: #ff9900;
+    --danger: #0069a6;
     --dark: #a0a0a0;
     --light: #fff;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
@@ -29,10 +33,18 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
     font-size: 1.2rem;
     color: #f3f3f3;
 }
+
 #logo {
     width: 40px;
 }
 
+.mail {
+    background-color: #0069a6;
+    color: #f3f3f3;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 0;
+}
 .hero {
     background-image: url('/assets/images/f5.png');
     height: 400px;
@@ -41,17 +53,36 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
     background-color: #f1f1f1;
 }
 
-.gap{
-    float: right;
-    margin-right: 100px;
+.hero div {
+    color: #333333;
+}
+
+.hero div h1 {
+    color: #2d2d2d;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
 }
 
 
+.gap{
+    float: right;
+    margin-right: 80px;
+}
 
+.team {
+    background-color: #e7d618;
+    color: #126792;
+    border-radius: 0;
+    border-color: #e7d618;
+    width: 120px;
+}
+
+.team a:hover {
+    background-color: #e9de21;
+}
 /*********MAIN CONTAINER************/
 
 .about {
-    background-color: var(--dark);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 50vh;
@@ -63,21 +94,39 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
     grid-column: 1/4;
 }
 
-@media only screen and (min-width: 768px) {
+/*Small devices/Potrait Tablets*/
+@media only screen and (min-width: 600px) {
     .about {
-        height: 20vh;
+        height: auto;
+        font-size: 16px;
     }
-
 }
 
-@media only screen and (max-width: 600px) {
+/*Medium devices/landscape tablets*/
+@media only screen and (min-width: 768px) {
     .about {
         height: auto;
     }
 }
 
+/*Large devices*/
+@media only screen and (min-width: 992px) {
+    .about {
+        height: auto;
+    }
+}
+
+/*Extra large devices*/
+@media only screen and (min-width: 1200px) {
+    .about {
+        height: 400px;
+    }
+}
+
+
 /************MISSION & VISION SECTION*/
 .chatter {
+    background-color: #f1f1f1;
     height: 30vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -96,21 +145,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
     grid-column: 2/3;
 }
 
-@media (min-width: 768px) {
-    .chatter {
-        height: auto;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .chatter {
-        height: 20vh;
-    }
-
-}
-
-
-
+/*Extra small devices*/
 @media only screen and (max-width: 600px) {
     .chatter {
         height: auto;
@@ -132,22 +167,34 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
     }
 }
 
+/*Small devices/Potrait Tablets*/
+@media only screen and (min-width: 600px) {
+    .chatter {
+        height: 250px;
+        font-size: 16px;
+
+    }
+}
+
+
+
 /**********FOOTER**************/
 .footer {
-    background-color: #a0a0a0;
+    background-color: #131413;
+    color: #fff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     height: 50vh;
 }
 
-@media only screen and (min-width: 768px) {
-    .footer {
-        height: 20vh;
-    }
-
+.footer h1 {
+    color: var(--danger);
+    font-size: 1.4em;
 }
-
+.footer p {
+    color: #f1f1f1;
+}
 
 @media only screen and (max-width: 600px) {
     .footer {
@@ -176,7 +223,38 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
     }
 }
 
+/*Small devices/Potrait Tablets*/
+@media only screen and (min-width: 600px) {
+    .footer {
+        height: auto;
+        font-size: 18px;
+    }
+}
+
+/*Medium devices/landscape tablets*/
+@media only screen and (min-width: 768px) {
+    .footer {
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .about {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .footer {
+        height: 400px;
+    }
+}
 .copyright {
     text-align: center;
     background-color: #333333;
+    height: auto;
+}
+
+.copyright p {
+    color: var(--light);
 }
